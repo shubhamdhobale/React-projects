@@ -1,10 +1,30 @@
 import "./App.css";
 import NewProduct from "./components/NewProduct";
 import Products from "./components/Products";
+/*import { useState } from 'react';
+import { useEffect } from 'react';*/
 
 
 function App() {
 
+
+    //UseEffect....
+    
+    /*  const [title , setTitle] = useState('');
+  const[name , setName] =  useState('love');
+
+useEffect(() => {
+console.log("change observed");
+return () => {
+  console.log("change removed");
+}
+  }, [title]);
+
+  function changeHandler(event){
+      setTitle(event.target.value);
+      console.log(title)
+    
+  }*/
     const products = [{
             id: 'p1',
             title: 'Nirma',
@@ -42,7 +62,8 @@ function App() {
     </div>
     <NewProduct />
     </div>
-   
+   //<input type="text" onChange={changeHandler}/>
+
     );
 }
 export default App;
