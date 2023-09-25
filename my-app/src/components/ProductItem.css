@@ -1,0 +1,34 @@
+.product-discription {
+    background-color: rgb(183, 215, 183);
+    height: 100px;
+    width: 25%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px rgb(183, 215, 183);
+}
+
+.product-discription>h1 {
+    color: rgb(104, 104, 104);
+    text-align: center;
+    font-weight: 900;
+}
+
+.cardproduct-item {
+    height: 20%;
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 10%;
+}
+
+button {
+    background-color: rgba(175, 165, 230, 0.571);
+    height: 40%;
+    font-weight: 800;
+    margin-top: 30px;
+    border: 1px solid rgba(175, 165, 230, 0.571);
+    border-radius: 7px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 10px 10px 30px rgba(175, 165, 230, 0.571);
+}

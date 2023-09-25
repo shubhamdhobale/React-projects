@@ -1,0 +1,28 @@
+.product-date {
+    background-color: rgb(231, 197, 197);
+    height: 100px;
+    width: 25%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px rgb(225, 196, 196);
+}
+
+.product-date-day {
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(104, 104, 104);
+}
+
+.product-date-month {
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgb(104, 104, 104);
+}
+
+.product-date-year {
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(104, 104, 104);
+}

@@ -1,0 +1,12 @@
+.App {
+    background-color: rgba(204, 204, 204, 0.53);
+    height: 80vh;
+    width: 50vw;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 10px 10px 50px rgb(225, 196, 196);
+}
