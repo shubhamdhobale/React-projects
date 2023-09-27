@@ -1,0 +1,17 @@
+    .app {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(to bottom, #091a31 0%, #001e35da 100%);
+    }
+    
+    .loader {
+        width: 91.666667%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        flex-wrap: wrap;
+    }
