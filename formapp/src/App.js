@@ -23,8 +23,11 @@ function App() {
 
   return (
     <div className='App'>
-      <form onSubmit={submitHandler}>
-
+   
+      <form onSubmit={submitHandler} className='form'>
+      <h1>Form-App</h1>
+      <hr />
+<div className='form-element'>
         <label htmlFor="firstName">First Name:</label><br></br>
         <input type="text"
           id='firstName'
@@ -107,7 +110,7 @@ function App() {
         <fieldset>
           <legend>By Email:</legend>
 
-          <label htmlFor="component">  Coponents:</label>
+          
           <input
             type="checkbox"
             name="component"
@@ -115,10 +118,10 @@ function App() {
             checked={FormData.component}
             onChange={changeHandler}
           />
+<label htmlFor="component">  Coponents   </label>
 
 
-
-          <label htmlFor="candidate">  candidate:</label>
+        
           <input
             type="checkbox"
             name="candidate"
@@ -127,9 +130,9 @@ function App() {
             onChange={changeHandler}
 
           />
+  <label htmlFor="candidate">  candidate</label>
 
-
-          <label htmlFor="offer">  Offer:</label>
+     
           <input
             type="checkbox"
             name="offer"
@@ -138,6 +141,7 @@ function App() {
             onChange={changeHandler}
 
           />
+               <label htmlFor="offer">  Offer</label>
         </fieldset>
 
 
@@ -177,7 +181,7 @@ function App() {
         </fieldset>
 
         <button>Save</button>
-
+</div>
 
       </form>
     </div>
