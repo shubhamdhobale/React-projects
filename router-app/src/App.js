@@ -1,27 +1,33 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Navbar';
-import Home from './Pages/Home';
-import Dashboard from './Pages/Dashboard';
-import Signup from './Pages/Signup';
-import Login from './Pages/Login';
-import { useState } from 'react';
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Login from "./Components/Login";
+import Home from "./Components/Home.jsx";
+import Signup from "./Components/Signup";
+import Dashboard from "./Components/Dashboard";
+import { Route, Routes } from "react-router-dom";
+import React, { useState, Fragment } from "react";
 
 function App() {
-
-const [isloggedin , setisloggedin] = useState(false);
-
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
-    <div className="App">
-      <Navbar isloggedin={isloggedin} setisloggedin={setisloggedin}/>
-
-<Routes>
-<Route path='/' element={<Home/>}/>
-<Route path='/login' element={<Login setisloggedin={setisloggedin}/>}/>
-<Route path='/signup' element={<Signup setisloggedin={setisloggedin}/>}/>
-<Route path='/dashboard' element={<Dashboard/>}/>
-</Routes>
-
+    <div className="w-screen h-screen bg-richblack-900 flex flex-col ">
+      <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <Routes>
+      <Fragment>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/login"
+          element={<Login setIsLoggedIn={setIsLoggedIn} />}
+        />
+        <Route
+          path="/signup"
+          element={<Signup setIsLoggedIn={setIsLoggedIn} />}
+        />
+    
+          <Route path="/dashboard" element={<Dashboard />} />
+      
+        </Fragment>
+      </Routes>
     </div>
   );
 }
