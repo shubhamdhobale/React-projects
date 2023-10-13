@@ -1,27 +1,31 @@
 import React from "react";
-import logo from "../assets/Logo.svg";
 import { Link } from "react-router-dom";
 import { toast } from "react-hot-toast";
 
 const Navbar = (props) => {
   const isLoggedIn = props.isLoggedIn;
   const setIsLoggedIn = props.setIsLoggedIn;
+
+
   return (
     <div className="flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto">
-      <Link to="/">
-        <img src={logo} height={32} width={160} loading="lazy" />
+
+
+      <Link to="/Home">
+        <h1 className="grid place-items-center text-richblack-100 text-2xl cursor-pointer">Logo</h1>
       </Link>
+
 
       <nav>
         <ul className="flex gap-x-6 text-richblack-100">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/Home" className="hover:bg-sky-700">Home</Link>
           </li>
           <li>
-            <Link to="/">About</Link>
+            <Link to="/About">About</Link>
           </li>
           <li>
-            <Link to="/">Contact</Link>
+            <Link to="/Contact">Contact</Link>
           </li>
         </ul>
       </nav>
@@ -43,8 +47,10 @@ const Navbar = (props) => {
             </button>
           </Link>
         )}
+
+
         {isLoggedIn && (
-          <Link to="/">
+          <Link to="/Home">
             <button
               onClick={() => {
                 setIsLoggedIn(false);
