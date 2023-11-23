@@ -11,7 +11,7 @@ const SignupForm = (props) => {
 
   const [showCreatePass, setShowCreatePass] = useState(false);
   const [showConfirmPass, setShowConfirmPass] = useState(false);
-  const [accountType, setAccountType] = useState("student");
+  const [accountType, setAccountType] = useState("student", "Host");
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -56,14 +56,14 @@ const SignupForm = (props) => {
           : "bg-transparent text-richblack-200 "
           } py-2 px-5 rounded-full transition-all`} >
         Student </button>
+
       <button onclick={
-        () => setAccountType("instructor")}
-        className={`${accountType === "instructor"
+        () => setAccountType("Host")}
+        className={`${accountType === "Host"
           ? "bg-richblack-900 text-richblack-5"
           : "bg-transparent text-richblack-200 "
           } py-2 px-5 rounded-full transition-all`} >
-        Instructor
-      </button>
+        Host </button>
     </div>
 
     <form onSubmit={submitHandler} >
