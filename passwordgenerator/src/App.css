@@ -1,0 +1,48 @@
+.container{
+  background-color: rgb(27, 27, 27);
+height: 25vh;
+width: 50%;
+color: antiquewhite;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+left: 24%;
+top: 10%;
+position: absolute;
+}
+
+h1{
+}
+input[type=text]{
+  padding: 10px;
+  width: 50%;
+  border-radius: 10px;
+  background-color: rgb(241, 241, 241);
+
+}
+input[type=range]
+input[type=checbox]
+label{
+
+}
+.generaeButton{display: flex;
+gap: 10px;
+margin-top: 20px;
+}
+button{
+  border-radius: 10px;
+  background-color: rgb(0, 193, 0);
+  padding: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+button:hover{
+  background-color: rgb(0, 209, 0);
+}
+.passwordField{display: flex;
+  width: 100%;
+  margin-left: 45%;
+  gap: 10px;
+
+}
