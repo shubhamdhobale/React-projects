@@ -1,13 +1,13 @@
-
+import UserContextProvider from './context/UserContextProvider'
 import './App.css'
 
 function App() {
   
 
   return (
-    <>
-      home
-    </>
+    <UserContextProvider>
+      <h1>useContext</h1>
+    </UserContextProvider>
   )
 }
 
