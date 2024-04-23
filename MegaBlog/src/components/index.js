@@ -8,6 +8,11 @@ import Signup from './Signup';
 import Login from './Login';
 import PostCard from './PostCard'
 import PostForm from './post-form/PostForm'
+import AuthLayout from '../components/AuthLayout'
+import AllPost from '../pages/AllPost'
+import EditPost from '../pages/EditPost'
+import AddPost from '../pages/AddPost'
+import Post from '../pages/Post'
 
 
 export {
@@ -20,5 +25,10 @@ export {
   Signup,
   Login,
   PostCard,
-  PostForm
+  PostForm,
+  AuthLayout,
+  AllPost,
+  EditPost,
+  AddPost,
+  Post
 }
