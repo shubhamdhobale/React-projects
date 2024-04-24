@@ -17,27 +17,26 @@ constructor() {
 
 //Post related Services
 
-async createPost({title , slug , content , featuredImage , status , userId}){
+async createPost({title, slug, content, featuredImageUrl, status, userId}){
   try {
-    return await this.databases.createDocument(
-      conf.appwriteDatabaseId,
-      conf.appwriteCollectionId,
-      slug,
-      {
-        title,
-        content,
-        featuredImage,
-        status,
-        userId,
-         
-      }
-    )
+      return await this.databases.createDocument(
+          conf.appwriteDatabaseId,
+          conf.appwriteCollectionId,
+          slug,
+          {
+              title,
+              content,
+              featuredImageUrl,
+              status,
+              userId,
+          }
+      )
   } catch (error) {
-    console.log("Appwrite service :: CreatePost error:: " , error);
+      console.log("Appwrite servive :: createPost :: error", error);
   }
 }
 
-async updatePost(slug , {title , content , featuredImage , status}){
+async updatePost(slug , {title , content , featuredImageUrl , status}){
 try {
   return await this.databases.updateDocument(
     conf.appwriteDatabaseId,
@@ -46,7 +45,7 @@ try {
     {
       title,
       content,
-      featuredImage, 
+      featuredImageUrl, 
       status,
     }
   )
@@ -126,10 +125,15 @@ async deleteFile(fileId){
 }
 
 getFilePreview(fileId){
-  return this.bucket.getFilePreview(
-    conf.appwriteBucketId,
-    fileId
-  )
+  
+  try {
+    return this.bucket.getFilePreview(
+      conf.appwriteBucketId,
+      fileId
+    )
+  } catch (error) {
+    console.log("Appwrite services :: getFilePreview Error :: " , error);
+  }
 }
 
 }

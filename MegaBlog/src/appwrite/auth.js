@@ -13,26 +13,27 @@ export class AuthService  {
 
   }
 
-async createAccount({email , password , name}){
-   try {
-    const userAccount =  await this.account.create( ID.unique() ,email , password , name)
-    if (userAccount) {
-      //call another method
-      return this.login({email , password});
-    } else {
-      return userAccount;
+  async createAccount({email, password, name}) {
+    try {
+        const userAccount = await this.account.create(ID.unique(), email, password, name);
+        if (userAccount) {
+            // call another method
+            return this.login({email, password});
+        } else {
+           return  userAccount;
+        }
+    } catch (error) {
+      console.log("Appwrite service :: createAccount Error" , error);
+        throw error;
     }
-   } catch (error) {
-   console.log("Appwrite service :: createAccount error" , error);
-   }
-  }
+}
 
 async login({email ,password}){
-    try{
-      return await this.account.createEmailSession(email , password)
-    }catch(error){
-     console.log("Appwrite service :: Login Error" , error);
-    }
+   try {
+    return await this.account.createEmailPasswordSession(email , password)
+   } catch (error) {
+    console.log("Appwrite service :: login Error", error);
+   }
   }
 
 async getCurrentUser(){

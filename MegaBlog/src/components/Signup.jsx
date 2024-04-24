@@ -66,13 +66,12 @@ const SignUp = () => {
             })}
             />
 
-            <Input 
-            label ="Password: "
-            placeholder = "Enter Your Password"
+            <Input
+            label="Password: "
             type="password"
-            {...register("Password" , {
-              required : true,
-            })}
+            placeholder="Enter your password"
+            {...register("password", {
+              required: true,})}
             />
             
             <Button type="submit" className="w-full">Create Account</Button>

@@ -13,6 +13,9 @@ import AllPost from '../pages/AllPost'
 import EditPost from '../pages/EditPost'
 import AddPost from '../pages/AddPost'
 import Post from '../pages/Post'
+import Button from './Button'
+import Input from './Input'
+import Select from './Select'
 
 
 export {
@@ -30,5 +33,8 @@ export {
   AllPost,
   EditPost,
   AddPost,
-  Post
+  Post,
+  Button,
+  Input,
+  Select
 }
